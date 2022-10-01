@@ -39,7 +39,7 @@
         "sudo apt install python3 -y",
         "sudo apt install git -y",
         "sudo apt install stress -y",
-        "sudo git https://github.com/hammuu786/ansible-asg /myrepo"
+        "sudo git clone https://github.com/hammuu786/ansible-asg /myrepo"
         ]
   }
 ]
