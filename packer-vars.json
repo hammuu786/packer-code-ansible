@@ -1,0 +1,9 @@
+{
+    "aws_access_key": "",
+    "aws_secret_key": "",
+    "region": "ap-south-1",
+    "source_ami": "ami-062df10d14676e201",
+    "instance_type": "t2.micro",
+    "vpc_id": "vpc-0fcd2e5481263dc9d",
+    "subnet_id": "subnet-08bf6f735338ba3be"
+}
