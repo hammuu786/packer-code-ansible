@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Set the URL for the latest version of Packer for Ubuntu
+URL="https://releases.hashicorp.com/packer/$(curl -s https://releases.hashicorp.com/packer/index.json | jq -r '.versions[].version' | grep -v "rc" | sort -V | tail -n1)/packer_$(curl -s https://releases.hashicorp.com/packer/index.json | jq -r '.versions[].version' | grep -v "rc" | sort -V | tail -n1)_linux_amd64.zip"
+
+# Download the latest version of Packer
+wget "$URL" -O packer.zip
+
+# Unzip the downloaded file
+unzip packer.zip
+
+# Move the Packer binary to /usr/local/bin
+sudo mv packer /usr/local/bin
+
+# Clean up the downloaded file
+rm packer.zip
